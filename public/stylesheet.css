@@ -1,0 +1,89 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Fira Code", serif;
+    font-style: normal;
+    color: antiquewhite;
+    background-color: #080808;
+}
+
+.glow {
+    box-shadow: rgba(72, 135, 202, 0.8) 0 0 15px 5px;
+}
+
+
+
+
+
+#name {
+    font-family: "Jersey 15", serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 6em;
+    padding: 5% 0 5% 5%;
+}
+
+.section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: x-small;
+}
+
+.header {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+
+
+
+
+
+
+
+/* contact form */
+.form-group input, .form-group textarea, .form-group button{
+    margin-bottom: 10px;
+    background-color: #080808;
+    color: antiquewhite;
+    border: 2px solid antiquewhite;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    cursor: pointer;
+    float: right;
+    transition-duration: 1s;
+}
+
+.form-group button:hover {
+    background-color: rgba(72, 135, 202, 0.8);
+}
+
+
+
+
+/* footer */
+#footer {
+    width: 100%;
+    color: antiquewhite;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: xx-small;
+  }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "build": "ejs -e 'views/**/*.ejs' -o public/"
+    "build": "npm install && npm start"
   },
   "keywords": [],
   "author": "",

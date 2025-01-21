@@ -24,7 +24,7 @@ for (const page of pages) {
     {}, // Pass additional data here if needed
     { root: viewsDir } // Set root to resolve partials
   );
-  await fs.writeFile(path.join(outputDir, `${page}.html`), html);
+  await fs.writeFile(path.join(outputDir, `index.html`), html);
 }
 
 // Copy public assets to docs folder, flattening the structure

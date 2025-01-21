@@ -27,9 +27,8 @@ for (const page of pages) {
   await fs.writeFile(path.join(outputDir, `${page}.html`), html);
 }
 
-// Copy public assets to docs folder
-const copyDirectory = async (source, destination) => {
-  await fs.mkdir(destination, { recursive: true });
+// Copy public assets to docs folder, flattening the structure
+const copyFilesToDist = async (source, destination) => {
   const items = await fs.readdir(source, { withFileTypes: true });
 
   for (const item of items) {
@@ -37,13 +36,15 @@ const copyDirectory = async (source, destination) => {
     const destPath = path.join(destination, item.name);
 
     if (item.isDirectory()) {
-      await copyDirectory(srcPath, destPath);
+      // Recursively copy files in subdirectories
+      await copyFilesToDist(srcPath, destination);
     } else {
+      // Copy file directly to docs folder
       await fs.copyFile(srcPath, destPath);
     }
   }
 };
 
-await copyDirectory(publicDir, path.join(outputDir, "public"));
+await copyFilesToDist(publicDir, outputDir);
 
 console.log("Static files generated successfully in the 'docs' folder.");
